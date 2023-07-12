@@ -83,3 +83,17 @@ function is_checked() {
     document.getElementById('result').innerText = "판매중";
   }
 }
+
+//수정버튼 클릭 후 폼 클릭 가능
+const editbtn = document.getElementById("edit-btn");
+const submitbtn = document.getElementById("submit-btn");
+
+editbtn.addEventListener("click", () => {
+  editbtn.style.display = "none";
+  submitbtn.style.display = "block";
+});
+
+function changeEdit(){
+  editbtn.style.display = "block";
+  submitbtn.style.display = "none";
+}
