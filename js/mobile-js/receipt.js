@@ -5,10 +5,11 @@ const orderBigNumberElement = document.querySelector('.big-order-number');
 const totalPriceElement = document.querySelector('.total-price');
 
 function renderOrderList(orderData) {
-  const orderedItemsDomString = orderData.order.items
-  .map(renderOrderedItemDOM)
-  .join('');
-  orderListContainer.innerHTML = orderedItemsDomString;
+  let orderedItemsDomString = '';
+  for (let i = 0; i < orderData.order.items.length; i++) {
+    orderedItemsDomString += renderOrderedItemDOM(orderData.order.items[i]);
+    orderListContainer.innerHTML = orderedItemsDomString;
+  }
   orderBigNumberElement.innerHTML = orderData.order.id;
   orderNumberElement.innerHTML = '주문 번호 : ' + orderData.order.id;
   orderDateElement.innerHTML = '주문 날짜 : ' 
@@ -19,11 +20,11 @@ function renderOrderList(orderData) {
 }
 
 function renderOrderedItemDOM(itemData) {
-  const price = itemData.unit_price * itemData.quantity;
+  const price = Number(itemData['unit-price']) * Number(itemData.quantity);
   const priceResult = price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
   return `
     <li>
-      <p class="menu-title">${itemData.product_name} X ${itemData.quantity}</p>
+      <p class="menu-title">${itemData.product.name} X ${itemData.quantity}</p>
       <p class="menu-price">${priceResult}</p>
     </li>
   `;
@@ -37,7 +38,7 @@ function getOrder(orderID) {
     const res = await response.json()
     orderGetResponse = res.data; // -> array
     renderOrderList(orderGetResponse);
-    console.log(orderGetResponse);
+    console.log(orderGetResponse.order.items);
     localStorage.clear();
   })
   .catch(error => console.error('Error:', error))
