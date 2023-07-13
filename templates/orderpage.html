@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>사자의 야심작</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="./orderpage.js" defer></script>
+    <link rel="stylesheet" href="./orderpage.css" />
+  </head>
+  <body>
+    <header>
+      <h1 id="head-logo">
+        <a href="#"><img src="/Image/LionAmbitious.png" /></a>
+      </h1>
+      <div class="profile-bar">
+        <p class="user-name">admin 님</p>
+        <button class="logout">로그아웃</button>
+      </div>
+    </header>
+    <nav>
+      <div class="status-nav">
+        <ul class="nav-btn">
+          <li class="nav-item">
+            <a class="nav-order" href="./order.html">주문</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-menu" href="/Menupage/menu.html">메뉴</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-manage" href="/SalesManagementPage/manage.html"
+              >매출</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- datepicker에서 날짜값 텍스트로 받아오기 -->
+
+    <!--  
+            <p><type="text" id="year">년 
+                <type="text" id="month"> 월 
+                    <type="text" id="day"> 일</p>
+
+            -->
+
+    <!--  원래 datepicker코드
+            <ul id="nav-item">
+                <li class="nav-item">
+
+                    
+                    <a class="nav-ink" href="#"> 
+                        <input type="button"
+                        id = "add-btn"
+                        value = "           ">년                       <input type="button"
+                        id = "add-btn"
+                        value = "           ">월                        <input type="button"
+                        id = "add-btn"
+                        value = "           ">일</a>
+                    -->
+    <!-- <input type="button" 
+                    id = "add-btn"
+                    value = "           ">
+                    -->
+
+    <!--  
+                    년<p id="year">월<p id="month">일:<p id="day"></p>
+
+
+
+
+
+                    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+                    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+                    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+                    <input type="text" name="mb_11" id="mb_11" class="ts" autocomplete="off"/>
+
+                    <script>
+                        $(function(){
+                            $('#mb_11').datepicker({
+                                lang:'ko',
+                                dateFormat: 'yy-mm-dd',
+                                monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'], //달력의 월 부분 텍스트
+                                monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'], //달력의 월 부분 Tooltip
+                                dayNamesMin: ['일','월','화','수','목','금','토'], //달력의 요일 텍스트
+                                dayNames: ['일요일','월요일','화요일','수요일','목요일','금요일','토요일'] //달력의 요일 Tooltip
+                            });
+                        })
+                    </script>
+                </li>
+            </ul>
+
+        -->
+
+    <!--  
+    <div id="container">
+        <div class="item">ordermenu-board</div>
+        <div class="item">cookingfinish-board</div>
+    </div>
+-->
+    <div id="contents">
+      <div id="calendar-nav">
+        <!-- <p><input type="text" id="date"></p> -->
+
+        <!-- <p><input type="text" id="year">년 <input type="text" id="month">월<input type="text" id="day">일</p> -->
+
+        <!-- <p id="year"></p>년<p id="month"></p>월<p id="day"></p>일 -->
+
+        <ul class="calendar-datetext">
+          <li class="calendar-text"><input type="text" id="year" />년</li>
+          <li class="calendar-text"><input type="text" id="month" />월</li>
+          <li class="calendar-text"><input type="text" id="day" />일</li>
+
+          <li class="calendar-text">
+            <input type="text" id="date" placeholder="선택" />
+          </li>
+        </ul>
+      </div>
+
+      <div id="container">
+        <div class="ordermenu-board">
+          접수 완료된 주문
+          <div class="ordermenu-list">
+            <input type="button" class="ordernumber-btn" value="15" />
+            <ul class="order-list">
+              <li id="order-item">주문내역: 야심작 버거 외 3개</li>
+              <li id="order-item">금액: 32,000원</li>
+            </ul>
+            <li class="orderstatus">
+              <input type="button" class="cooked-btn" value=" 조리 완료 " />
+            </li>
+          </div>
+          <div class="ordermenu-list">
+            <!--  
+                <li class="ordernumber">15
+                    <input type="button" 
+                    id = "add-btn"
+                    value = " 15 ">  
+                </li>
+            -->
+            <input type="button" class="ordernumber-btn" value="14" />
+
+            <ul class="order-list">
+              <li id="order-item">주문내역: 야심작 버거 외 3개</li>
+              <li id="order-item">금액: 32,000원</li>
+            </ul>
+            <li class="orderstatus">
+              <input type="button" class="cooked-btn" value=" 조리 완료 " />
+            </li>
+          </div>
+          <div class="ordermenu-list">
+            <input type="button" class="ordernumber-btn" value="13" />
+
+            <ul class="order-list">
+              <li id="order-item">주문내역: 야심작 버거 외 3개</li>
+              <li id="order-item">금액: 32,000원</li>
+            </ul>
+            <li class="orderstatus">
+              <input type="button" class="cooked-btn" value=" 조리 완료 " />
+            </li>
+          </div>
+          <div class="ordermenu-list">
+            <input type="button" class="ordernumber-btn" value="12" />
+
+            <ul class="order-list">
+              <li id="order-item">주문내역: 야심작 버거 외 3개</li>
+              <li id="order-item">금액: 32,000원</li>
+            </ul>
+            <li class="orderstatus">
+              <input type="button" class="cooked-btn" value=" 조리 완료 " />
+            </li>
+          </div>
+          <div class="ordermenu-list">
+            <input type="button" class="ordernumber-btn" value="11" />
+            <ul class="order-list">
+              <li id="order-item">주문내역: 야심작 버거 외 3개</li>
+              <li id="order-item">금액: 32,000원</li>
+            </ul>
+            <li class="orderstatus">
+              <input type="button" class="cooked-btn" value=" 조리 완료 " />
+            </li>
+          </div>
+        </div>
+        <div class="cookingfinish-board">
+          조리 완료된 주문
+          <div class="cookingfinish-list">
+            <input type="button" class="ordernumber-btn" value="10" />
+            <ul class="order-list">
+              <li id="order-item">주문내역: 야심작 버거 외 3개</li>
+              <li id="order-item">금액: 32,000원</li>
+            </ul>
+          </div>
+          <div class="cookingfinish-list">
+            <input type="button" class="ordernumber-btn" value="9" />
+            <ul class="order-list">
+              <li id="order-item">주문내역: 야심작 버거 외 3개</li>
+              <li id="order-item">금액: 32,000원</li>
+            </ul>
+          </div>
+          <div class="cookingfinish-list">
+            <input type="button" class="ordernumber-btn" value="8" />
+            <ul class="order-list">
+              <li id="order-item">주문내역: 야심작 버거 외 3개</li>
+              <li id="order-item">금액: 32,000원</li>
+            </ul>
+          </div>
+          <div class="cookingfinish-list">
+            <input type="button" class="ordernumber-btn" value="7" />
+            <ul class="order-list">
+              <li id="order-item">주문내역: 야심작 버거 외 3개</li>
+              <li id="order-item">금액: 32,000원</li>
+            </ul>
+          </div>
+          <div class="cookingfinish-list">
+            <input type="button" class="ordernumber-btn" value="6" />
+            <ul class="order-list">
+              <li id="order-item">주문내역: 야심작 버거 외 3개</li>
+              <li id="order-item">금액: 32,000원</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--  
+    <div id="board-container">
+    <div id="orderedmenu-board">
+        <div id="listof-order">
+            <ul id="order-list">
+                <li id="order-item">
+                    <span id="order-content"> 주문번호 주문내역 금액</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+    <div id="cookingfinish-board">
+        <div id="listof-order">
+            <ul id="order-list">
+                <li id="order-item">
+                    <span id="order-content"> 주문번호 주문내역 금액</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+-->
+
+    <input type="button" id="add-btn" value="모달창띄우기" />
+
+    <!--
+    <div class="modal">
+        <div class="modal-body">
+            <span id="close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3302 31.7199C27.1154 32.5264 28.4112 32.5264 29.1963 31.7199L30.4591 30.4228C31.215 29.6463 31.215 28.409 30.4591 27.6326L21.0134 17.9301C20.2575 17.1536 20.2575 15.9163 21.0134 15.1398L30.4591 5.43735C31.215 4.66087 31.215 3.42359 30.4591 2.64711L29.1963 1.34999C28.4112 0.543492 27.1154 0.543492 26.3302 1.34999L15.7362 12.232L5.14212 1.35C4.35696 0.543496 3.06118 0.543497 2.27602 1.35L1.01324 2.64711C0.257306 3.42359 0.257305 4.66087 1.01324 5.43736L10.4589 15.1398C11.2149 15.9163 11.2149 17.1536 10.4589 17.9301L1.01324 27.6326C0.257306 28.409 0.257306 29.6463 1.01324 30.4228L2.27602 31.7199C3.06118 32.5264 4.35696 32.5264 5.14212 31.7199L15.7362 20.8379L26.3302 31.7199Z" fill="white"/>
+            </svg>
+            </span>
+        </div>
+    </div>
+
+
+    <div class="button">
+        <div class="modal-body">
+            <span id="close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="33" viewBox="0 0 32 33" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd" d="M26.3302 31.7199C27.1154 32.5264 28.4112 32.5264 29.1963 31.7199L30.4591 30.4228C31.215 29.6463 31.215 28.409 30.4591 27.6326L21.0134 17.9301C20.2575 17.1536 20.2575 15.9163 21.0134 15.1398L30.4591 5.43735C31.215 4.66087 31.215 3.42359 30.4591 2.64711L29.1963 1.34999C28.4112 0.543492 27.1154 0.543492 26.3302 1.34999L15.7362 12.232L5.14212 1.35C4.35696 0.543496 3.06118 0.543497 2.27602 1.35L1.01324 2.64711C0.257306 3.42359 0.257305 4.66087 1.01324 5.43736L10.4589 15.1398C11.2149 15.9163 11.2149 17.1536 10.4589 17.9301L1.01324 27.6326C0.257306 28.409 0.257306 29.6463 1.01324 30.4228L2.27602 31.7199C3.06118 32.5264 4.35696 32.5264 5.14212 31.7199L15.7362 20.8379L26.3302 31.7199Z" fill="white"/>
+            </svg>
+            </span>
+        </div>
+    </div>
+
+-->
+    <div id="modal-wrap">
+      <div id="modal-body">
+        <div id="modal-content">
+          <span id="close-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="32"
+              height="33"
+              viewBox="0 0 32 33"
+              fill="none"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M26.3302 31.7199C27.1154 32.5264 28.4112 32.5264 29.1963 31.7199L30.4591 30.4228C31.215 29.6463 31.215 28.409 30.4591 27.6326L21.0134 17.9301C20.2575 17.1536 20.2575 15.9163 21.0134 15.1398L30.4591 5.43735C31.215 4.66087 31.215 3.42359 30.4591 2.64711L29.1963 1.34999C28.4112 0.543492 27.1154 0.543492 26.3302 1.34999L15.7362 12.232L5.14212 1.35C4.35696 0.543496 3.06118 0.543497 2.27602 1.35L1.01324 2.64711C0.257306 3.42359 0.257305 4.66087 1.01324 5.43736L10.4589 15.1398C11.2149 15.9163 11.2149 17.1536 10.4589 17.9301L1.01324 27.6326C0.257306 28.409 0.257306 29.6463 1.01324 30.4228L2.27602 31.7199C3.06118 32.5264 4.35696 32.5264 5.14212 31.7199L15.7362 20.8379L26.3302 31.7199Z"
+                fill="white"
+              />
+            </svg>
+          </span>
+          <div id="item-detail">
+            <p id="modal-title">주문 상세</p>
+            <p id="modal-ordernum">주문 번호: 15</p>
+            <p id="modal-orderdate">주문 날짜: 23-06-27 01:23, 화요일</p>
+
+            <!--
+                    <hr />
+                    <form method="post" enctype="multipart/form-data">
+                        <div id="form-img">
+                            <div id="img-view"></div>
+                            <div id="btn-wrap">
+                                <label for="img-add">
+                                    <div id="btn-text">
+                                        등록
+                                    </div>
+                                </label>
+                                <input type="file" 
+                                id="img-add" 
+                                accept="image/*" 
+                                onchange="loadFile(this)";
+                               >
+                                <label for="img-del">
+                                    <div id="btn-text">
+                                        삭제
+                                    </div>
+                                </label>
+                                <input type="button"
+                                id="img-del"
+                                onclick="delFile()";
+                                >
+                            </div>
+                        </div>
+                        <div id="form-text">
+                            <div id="text-group">
+                                <div id="item-group">
+                                    <span id="input-title">상품그룹</span>
+                                      <div class="dropdown">
+                                        <button class="dropbtn">
+                                          <span class="dropbtn_content">상품그룹 선택</span>
+                                          <span class="dropbtn_click" style="font-family: Material Icons; color : #3b3b3b; float:right;"
+                                          onmouseover="dropdown()">arrow_drop_down</span>
+                                        </button>
+                                        <div class="dropdown-content">
+                                          <div class="menu-list" onclick="showMenu(this.innerText)">버거</div>
+                                          <div class="menu-list" onclick="showMenu(this.innerText)">사이드</div>
+                                          <div class="menu-list" onclick="showMenu(this.innerText)">음료</div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <br>
+                                <div id="item-title">
+                                    <span id="input-title">상품명</span>
+                                    <input type="text" placeholder="상품명 입력">
+                                </div>
+                                <br>
+                                <div id="item-price">
+                                    <span id="input-title">가격</span>
+                                    <input type="text" placeholder="가격 입력">
+                                </div>
+                                <br>
+                            </div>
+                            <div id="item-status">
+                                <span id="status-title">상태</span>
+                                <div id="toggle">
+                                    <label id="toggle-wrap">
+                                        <span id="result">판매중</span>
+                                        <input role="switch" id="toggle-checkbox" type="checkbox" onclick="is_checked()">
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </form>
+                    <hr />
+
+                    <input type="submit"
+                    id="save-btn"
+                    value="저장"> 
+
+                -->
+            <hr />
+            <form method="post" enctype="multipart/form-data">
+              <div class="form-text">
+                <div class="detail-menu">
+                  <li class="item-menu">야심작버거 x 1</li>
+                  <li class="item-menu">골든 프렌치 프라이 x 2</li>
+                  <li class="item-menu">불멸의 에너지 x 3</li>
+                </div>
+
+                <div class="detail-price">
+                  <li class="item-price">8,000</li>
+                  <li class="item-price">10,000</li>
+                  <li class="item-price">12,000</li>
+                </div>
+                <br />
+              </div>
+            </form>
+
+            <hr />
+
+            <li id="price-sum">총: 30,000원</li>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"
+    />
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!-- <input type="text" name="mb_11" id="mb_11" class="ts" autocomplete="off"/>             -->
+
+    <script type="text/javascript">
+      $(function () {
+        $("#date").datepicker({
+          dateFormat: "yy/mm/dd",
+          dayNamesMin: ["일", "월", "화", "수", "목", "금", "토"],
+          monthNames: [
+            "1월",
+            "2월",
+            "3월",
+            "4월",
+            "5월",
+            "6월",
+            "7월",
+            "8월",
+            "9월",
+            "10월",
+            "11월",
+            "12월",
+          ],
+          onSelect: function (d) {
+            alert(d + " 선택되었습니다");
+
+            var arr = d.split("/");
+            var year = arr[0];
+            var month = arr[1];
+            var day = arr[2];
+
+            $("#year").val(year);
+            $("#month").val(month);
+            $("#day").val(day);
+
+            //요일 가져오기
+            //데이터를 먼저 가져오고 (숫자로 넘어옴)
+            var date = new Date(
+              $("#date").datepicker({ dateFormat: "yy/mm/dd" }).val()
+            );
+            //일요일 0~
+            //alert("date:"+date.getDay());
+
+            week = new Array("일", "월", "화", "수", "목", "금", "토");
+            $("#mydate").text(week[date.getDay()]);
+          },
+        });
+      });
+    </script>
+  </body>
+</html>

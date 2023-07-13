@@ -1,0 +1,63 @@
+.main {
+  text-align: center;
+}
+
+.main-logo {
+  height: 20vh;
+  margin: 6vh auto;
+  object-fit: cover;
+}
+
+.to-go {
+  height: 25vh;
+  margin: 0 10% 5vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #FEAC18;
+  border-radius: 15px;
+  transition: all 0.1s linear;
+}
+
+.to-go:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.to-go h1 {
+  color: #101010;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+.for-here {
+  height: 25vh;
+  margin: 0 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #101010;
+  border-radius: 15px;
+  transition: all 0.1s linear;
+}
+
+.for-here:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+}
+
+.for-here h1 {
+  color: #FEAC18;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+footer {
+  text-align: center;
+}
+
+.copyright {
+  margin: 5vh 0;
+  font-size: 12px;
+  color: #8c8c8c;
+}

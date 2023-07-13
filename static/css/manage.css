@@ -1,0 +1,310 @@
+@font-face {
+  font-family: "Pretendard-Regular";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff")
+    format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Pretendard-Regular";
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+#head-logo {
+  justify-content: center;
+  width: 12.5rem;
+  height: 9.03225rem;
+  flex-shrink: 0;
+  margin-left: 38.75rem;
+  margin-right: 15.56rem;
+  margin-top: 3.13rem;
+  margin-bottom: 2.05rem;
+}
+
+.me-bar {
+  display: inline-flex;
+  padding: 1.5625rem;
+  justify-content: center;
+  align-items: center;
+  gap: 6.25rem;
+  margin-left: 6.88rem;
+  margin-top: 7.91rem;
+  margin-bottom: 2.05rem;
+}
+
+.logout {
+  background-color: white;
+  border: none;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+a {
+  color: #a7a7a7;
+  text-decoration-line: none;
+  text-align: center;
+  font-size: 1.5625rem;
+  font-family: Pretendard;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.nav-btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 22.5rem;
+}
+
+.nav-item {
+  padding: 0 0.6rem;
+}
+
+.nav-manage {
+  color: #101010;
+  text-align: center;
+  font-size: 1.5625rem;
+  font-family: Pretendard;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.triangle {
+  width: 4.375rem;
+  height: 0.4375rem;
+  background: #feac18;
+}
+
+/* 메인보드(주황 둥근 사각형) */
+.main-board {
+  margin-top: 2.25rem;
+  width: 75rem;
+  background-color: #fec969;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+/* 달력 */
+.dateHead div {
+  background: #f3f5f5;
+  color: black;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: 900;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.grid div {
+  padding: 0.6rem;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.dateBoard div {
+  color: #222;
+  font-weight: bold;
+  min-height: 6rem;
+  padding: 0.6rem 0.8rem;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+}
+
+/* 좌우 버튼 */
+.btn {
+  display: block;
+  width: 1.125rem;
+  height: 1.8125rem;
+}
+
+.dateTitle {
+  color: #101010;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 2.25rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.prevDay {
+  margin-right: 6.25rem;
+  margin-top: 0.4rem;
+  transform: rotate(0deg);
+}
+
+.nextDay {
+  margin-left: 6.25rem;
+  margin-top: 0.4rem;
+  transform: rotate(180deg);
+}
+
+/* ---- */
+
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css");
+
+.rap {
+  margin-top: 2.5rem;
+  margin-bottom: 1.8rem;
+}
+
+.dateHead {
+  margin-top: 1.81rem;
+}
+
+.calender {
+  background-color: white;
+}
+
+/* 모달창 부분 */
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: none;
+}
+
+.modal.show {
+  display: block;
+}
+
+.modal-body {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  bottom: 0;
+  width: 75rem;
+  height: 45.4375rem;
+  background-color: rgba(16, 16, 16, 0.9);
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+#add-btn {
+  position: absolute;
+  z-index: 2;
+  width: 8rem;
+  height: 4.7rem;
+  border-style: none;
+  background-color: rgba(0, 0, 0, 0); /* 버튼 구현되면 불투명도 0으로 바꿔*/
+  color: #101010;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+}
+
+#close-btn {
+  position: absolute;
+  left: 70.27788rem;
+  top: 2.73406rem;
+  width: 1.91125rem;
+  height: 1.97375rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* 모달창 내용 */
+.today-sales {
+  color: #fff;
+  text-align: center;
+  font-family: Pretendard;
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  margin-bottom: 1.9rem;
+}
+
+hr {
+  border: none;
+  border: 0.06rem dashed #fff;
+  width: 50rem;
+  height: 0.0625rem;
+}
+
+.today-date {
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 32.58rem;
+}
+
+.flex1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 2.56rem;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: #fff;
+  font-family: Pretendard;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 1.89rem;
+  margin-bottom: 5.63rem;
+}
+
+.today-price {
+  margin-right: 2.75rem;
+}

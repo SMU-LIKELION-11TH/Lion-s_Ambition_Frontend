@@ -1,0 +1,103 @@
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pretendard-Regular';
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul, li{
+    list-style: none;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#head-logo {
+    justify-content: center;
+    width: 12.5rem;
+    height: 9.03225rem;
+    flex-shrink: 0;
+    margin-left: 38.75rem;
+    margin-right: 15.56rem;
+    margin-top: 3.13rem;
+    margin-bottom: 2.05rem;
+}
+
+.me-bar {
+    display: inline-flex;
+    padding: 1.5625rem;
+    justify-content: center;
+    align-items: center;
+    gap: 6.25rem;
+    margin-left: 6.88rem;
+    margin-top: 7.91rem;
+    margin-bottom: 2.05rem;
+}
+.logout {
+    background-color: white;
+    border: none;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+}
+
+a{
+    color: #A7A7A7;
+    text-decoration-line: none;
+    text-align: center;
+    font-size: 1.5625rem;
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.nav-btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 22.5rem;
+}
+
+.nav-item {
+    padding: 0 0.6rem;
+}
+
+.nav-order {
+    color: #101010;
+    text-align: center;
+    font-size: 1.5625rem;
+    font-family: Pretendard;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.triangle {
+    width: 4.375rem;
+    height: 0.4375rem;
+    background: #FEAC18;
+    
+}

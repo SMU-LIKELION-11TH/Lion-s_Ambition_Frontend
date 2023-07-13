@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사자의 야심작</title>
+    <script src="./script/menu.js" defer></script>
+    <link rel="stylesheet" href="./styles/menu.css">
+</head>
+<body>
+    <header>
+        <h1 id="head-logo">
+            <a href="#"><img src="./assets/LionAmbitious.png"/></a>
+        </h1>
+        <div class="me-bar">
+            <p class="user-name">admin 님</p>
+            <button class="logout">로그아웃</button>
+        </div>
+    </header>
+    <nav>
+        <div class="status-nav">
+            <ul class="nav-btn">
+                <li class="nav-item"><a class="nav-order" href="/orderview/ordercopy.html">주문</a></li>    
+                <li class="nav-item"><a class="nav-menu" href="/menu-view/menu.html">메뉴</a></li>   
+                <li class="nav-item"><a class="nav-manage" href="/ambitious-lion-common/SalesManagementPage/manage.html">매출</a></li>   
+            </ul>
+        </div>
+        <div class="triangle"></div>
+    </nav>
+
+    <div id="main-board">
+        <div id="status-nav">
+            <ul id="nav-btn">
+                <li id="nav-item">
+                  <a id="nav-link" href="#">전체</a>
+                </li>
+                <li id="nav-item">
+                    <a id="nav-link" href="#">판매중</a>
+                </li>
+                <li id="nav-item">
+                    <a id="nav-link" href="#">품절</a>
+                </li>
+            </ul>
+              <input type="button" 
+              id = "add-btn" 
+              value = "상품 추가">
+        </div>
+        <div id="list-menu">
+            <ul id="card-list">
+                <li id="card-item">
+                    <img src = "./assets/야심작_버거.png">
+                    <span id="item-name">야심작 버거</span>
+                    <div id="soldout">
+                        <p id="soldout-text">품절</p>
+                    </div>
+                </li>
+                <li id="card-item">
+                        <img src = "./assets/화끈한_불고기_버거.png">
+                        <span id="item-name">화끈한 불고기 버거</span>
+                </li>
+                <li id="card-item">
+                    <img src = "./assets/치즈_폭탄_버거.png">
+                    <span id="item-name">치즈 폭탄 버거</span>
+                </li>
+                <li id="card-item">
+                    <img src = "./assets/크런치_쉬림프_버거.png">
+                    <span id="item-name">크런치 쉬림프 버거</span>
+                </li>
+                <li id="card-item">
+                    <img src = "./assets/멕시칸_스타일_버거.png">
+                    <span id="item-name">멕시칸 스타일 버거</span>
+                </li>
+                <li id="card-item">
+                    <img src = "./assets/골든_프렌치_프라이.png">
+                    <span id="item-name">골든 프렌치 프라이</span>
+                </li>
+                <li id="card-item">
+                    <img src = "./assets/정글_어니언_링.png">
+                    <span id="item-name">정글 어니언 링</span>
+                </li>
+                <li id="card-item">
+                    <img src = "./assets/핫_윙.png">
+                    <span id="item-name">핫 윙</span>
+                </li>
+                <li id="card-item">
+                    <img src = "./assets/핫_윙.png">
+                    <span id="item-name">핫 윙</span>
+                </li>
+                <li id="card-item">
+                    <img src = "./assets/핫_윙.png">
+                    <span id="item-name">핫 윙</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="modal-wrap">
+        <div id="modal-body">
+              <div id="modal-content">
+                <span id="close-btn">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                    width="32"
+                    height="33"
+                    viewBox="0 0 32 33" 
+                    fill="none">
+                    <path 
+                    fill-rule="evenodd" 
+                    clip-rule="evenodd" 
+                    d="M26.3302 31.7199C27.1154 32.5264 28.4112 32.5264 29.1963 31.7199L30.4591 30.4228C31.215 29.6463 31.215 28.409 30.4591 27.6326L21.0134 17.9301C20.2575 17.1536 20.2575 15.9163 21.0134 15.1398L30.4591 5.43735C31.215 4.66087 31.215 3.42359 30.4591 2.64711L29.1963 1.34999C28.4112 0.543492 27.1154 0.543492 26.3302 1.34999L15.7362 12.232L5.14212 1.35C4.35696 0.543496 3.06118 0.543497 2.27602 1.35L1.01324 2.64711C0.257306 3.42359 0.257305 4.66087 1.01324 5.43736L10.4589 15.1398C11.2149 15.9163 11.2149 17.1536 10.4589 17.9301L1.01324 27.6326C0.257306 28.409 0.257306 29.6463 1.01324 30.4228L2.27602 31.7199C3.06118 32.5264 4.35696 32.5264 5.14212 31.7199L15.7362 20.8379L26.3302 31.7199Z" 
+                    fill="white"/>
+                  </svg>
+                </span>
+                <div id="item-detail">
+                    <p id="modal-title">상품 상세</p>
+                    <hr />
+                    <form method="post" enctype="multipart/form-data">
+                        <div id="form-img">
+                            <div id="img-view"></div>
+                            <div id="btn-wrap">
+                                <label for="img-add">
+                                    <div id="btn-text">
+                                        등록
+                                    </div>
+                                </label>
+                                <input type="file" 
+                                id="img-add" 
+                                accept="image/*" 
+                                onchange="loadFile(this)";
+                               >
+                                <label for="img-del">
+                                    <div id="btn-text">
+                                        삭제
+                                    </div>
+                                </label>
+                                <input type="button"
+                                id="img-del"
+                                onclick="delFile()";
+                                >
+                            </div>
+                        </div>
+                        <div id="form-text">
+                            <div id="text-group">
+                                <div id="item-group">
+                                    <span id="input-title">상품그룹</span>
+                                      <div class="dropdown">
+                                        <button class="dropbtn" onmouseover="dropdown()">
+                                          <span class="dropbtn_content">상품그룹 선택</span>
+                                          <span class="dropbtn_click" style="font-family: Material Icons; color : #3b3b3b; float:right;"
+                                          >arrow_drop_down</span>
+                                        </button>
+                                        <div class="dropdown-content">
+                                          <div class="menu-list" onclick="showMenu(this.innerText)">버거</div>
+                                          <div class="menu-list" onclick="showMenu(this.innerText)">사이드</div>
+                                          <div class="menu-list" onclick="showMenu(this.innerText)">음료</div>
+                                        </div>
+                                      </div>
+                                </div>
+                                <br>
+                                <div id="item-title">
+                                    <span id="input-title">상품명</span>
+                                    <input type="text" placeholder="상품명 입력">
+                                </div>
+                                <br>
+                                <div id="item-price">
+                                    <span id="input-title">가격</span>
+                                    <input type="text" placeholder="가격 입력">
+                                </div>
+                                <br>
+                            </div>
+                            <div id="item-status">
+                                <span id="status-title">상태</span>
+                                <div id="toggle">
+                                    <label id="toggle-wrap">
+                                        <span id="result">판매중</span>
+                                        <input role="switch" id="toggle-checkbox" type="checkbox" onclick="is_checked()">
+                                    </label>
+                                </div>
+                            </div>
+                            <br>
+                        </div>
+                    </form>
+                    <hr />
+                    <input type="submit"
+                    id="save-btn"
+                    value="저장"> 
+                </div>
+              </div>
+        </div>
+        </div>
+    </div>
+
+</body>
+</html>
