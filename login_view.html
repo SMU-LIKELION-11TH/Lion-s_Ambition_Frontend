@@ -38,18 +38,20 @@
         <div class="login_login">
             <h1>로그인</h1>
         </div>
-        <div class="login_id">
-            <h2>이메일</h2>
-            <input type="email" id="username" name="username" placeholder="Email">
-        </div>
-        <div class="login_pw">
-            <h3>비밀번호</h3>
-            <input type="password" id="password" name="password" placeholder="Password">
-        </div>
-        <div class="login_bt_wrap">
-            <button type="button" style="cursor:pointer;" onclick="onSubmitLogin();">로그인</button>
-            <input id="form_submit" type="submit" style="display:none">
-        </div>
+        <form method="POST" action="/api/v1/login">
+            <div class="login_id">
+                <h2>이메일</h2>
+                <input type="email" id="username" name="email" placeholder="Email">
+            </div>
+            <div class="login_pw">
+                <h3>비밀번호</h3>
+                <input type="password" id="password" name="password" placeholder="Password">
+            </div>
+            <div class="login_bt_wrap">
+                <button type="button" style="cursor:pointer;">로그인</button>
+                <input id="form_submit" type="submit" style="display:none">
+            </div>
+        </form>
         <div class="login_ka">
             <button type="button" style="cursor:pointer;" onclick="javascript:KakaoLogin();" ><img src="assets/kakao 1.png"><h5>카카오톡 간편 로그인</h5></button>                
         </div>
