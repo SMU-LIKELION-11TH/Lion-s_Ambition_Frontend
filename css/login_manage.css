@@ -3,34 +3,39 @@
     src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
     font-weight: 400;
     font-style: normal;
-}
 
-body{
+  }
+  
+  body{
     width: 1440px;
     height: 1024px;
-}
-
-* {
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Pretendard-Regular';
-}
+  }
+  
+  .logout {
+    background-color: white;
+    border: none;
+  }
 
-
-ul, li{
+  ul, li{
     list-style: none;
-}
-
-
-header {
+  }
+  
+  
+  header {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-}
-
-#head-logo {
+  }
+  
+  #head-logo {
     justify-content: center;
     width: 12.5rem;
     height: 9.03225rem;
@@ -39,9 +44,9 @@ header {
     margin-right: 15.56rem;
     margin-top: 3.13rem;
     margin-bottom: 2.05rem;
-}
-
-.me-bar {
+  }
+  
+  .me-bar {
     display: inline-flex;
     padding: 1.5625rem;
     justify-content: center;
@@ -50,21 +55,21 @@ header {
     margin-left: 6.88rem;
     margin-top: 7.91rem;
     margin-bottom: 2.05rem;
-}
-
-
-a{
+  }
+  
+  
+  a{
     color: #101010; 
     text-decoration-line: none;
-}
-
-.order_o{
+  }
+  
+  .order_o{
     display: flex;
     margin-top: 45px;
-}
-
-
-.order > button{
+  }
+  
+  
+  .order > button{
     margin-top: 45px;
     margin-left: 110px;
     width: 380px;
@@ -72,9 +77,10 @@ a{
     border-radius: 20px;
     background: #FEC969;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-.order_order{
+    border-style: none;
+  }
+  
+  .order_order{
     display: flex;
     justify-content: center;
     margin-top: -80px;
@@ -85,18 +91,18 @@ a{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-}
-
-
-.order > button > img{
+  }
+  
+  
+  .order > button > img{
     display: flex;
     margin-top: 52px;
     margin-left: 110px;
     width: 159.75px;
     height: 216px;
-}
-
-.order_what{
+  }
+  
+  .order_what{
     margin-top: 70px;
     display: flex;
     color: #101010;
@@ -106,9 +112,9 @@ a{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.order_what_what{
+  }
+  
+  .order_what_what{
     display: flex;
     color: #101010;
     justify-content: center;
@@ -117,9 +123,9 @@ a{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.money > button{
+  }
+  
+  .money > button{
     margin-top: 45px;
     margin-left: 40px;
     width: 380px;
@@ -127,12 +133,13 @@ a{
     border-radius: 20px;
     background: #FEC969;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-.money_money{
+    border-style: none;
+  }
+  
+  .money_money{
     display: flex;
     justify-content: center;
-    margin-top: -80px;
+    margin-top: -50px;
     color: #101010;
     text-align: center;
     font-family: Pretendard;
@@ -140,18 +147,19 @@ a{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-}
-
-
-.money > button > img{
+  }
+  
+  
+  .money > button > img{
     display: flex;
     margin-top: 52px;
     margin-left: 110px;
     width: 159.75px;
     height: 216px;
-}
-
-.meney_what{
+    object-fit: cover;
+  }
+  
+  .meney_what{
     margin-top: 70px;
     display: flex;
     color: #101010;
@@ -161,9 +169,9 @@ a{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.money_what_what{
+  }
+  
+  .money_what_what{
     display: flex;
     color: #101010;
     justify-content: center;
@@ -172,9 +180,9 @@ a{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.money_what_what_what{
+  }
+  
+  .money_what_what_what{
     display: flex;
     color: #101010;
     justify-content: center;
@@ -183,9 +191,9 @@ a{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.menu > button{
+  }
+  
+  .menu > button{
     margin-top: 45px;
     margin-left: 40px;
     width: 380px;
@@ -193,9 +201,10 @@ a{
     border-radius: 20px;
     background: #FEC969;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-
-.menu_menu{
+    border-style: none;
+  }
+  
+  .menu_menu{
     display: flex;
     justify-content: center;
     margin-top: -80px;
@@ -206,18 +215,18 @@ a{
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-}
-
-
-.menu > button > img{
+  }
+  
+  
+  .menu > button > img{
     display: flex;
     margin-top: 52px;
     margin-left: 110px;
     width: 159.75px;
     height: 216px;
-}
-
-.menu_what{
+  }
+  
+  .menu_what{
     margin-top: 70px;
     display: flex;
     color: #101010;
@@ -227,9 +236,9 @@ a{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.menu_what_what{
+  }
+  
+  .menu_what_what{
     display: flex;
     color: #101010;
     justify-content: center;
@@ -238,36 +247,36 @@ a{
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.me-bar > button:active{
+  }
+  
+  .me-bar > button:active{
     position: relative;
     top: 2px;        
-}
-
-.order > button:active{
+  }
+  
+  .order > button:active{
     position: relative;
     top: 2px;     
-}
-
-.order >button:hover{
+  }
+  
+  .order >button:hover{
     opacity: 0.8;
-}
-
-.menu > button:active{
+  }
+  
+  .menu > button:active{
     position: relative;
     top: 2px;     
-}
-
-.menu >button:hover{
+  }
+  
+  .menu >button:hover{
     opacity: 0.8;
-}
-
-.money > button:active{
+  }
+  
+  .money > button:active{
     position: relative;
     top: 2px;    
-}
-
-.money >button:hover{
+  }
+  
+  .money >button:hover{
     opacity: 0.8;
-}
+  }

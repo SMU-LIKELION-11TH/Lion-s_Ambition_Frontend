@@ -212,6 +212,7 @@ a {
 }
 
 .modal-body {
+  overflow-y: scroll;
   position: absolute;
   top: 60%;
   left: 50%;
@@ -229,7 +230,20 @@ a {
   transform: translateX(-50%) translateY(-50%);
 }
 
-#add-btn {
+.modal-content {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  bottom: 0;
+  width: 75rem;
+  height: 45.4375rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.add-btn {
   position: absolute;
   z-index: 2;
   width: 8rem;
@@ -302,7 +316,6 @@ hr {
   font-weight: 500;
   line-height: normal;
   margin-top: 1.89rem;
-  margin-bottom: 5.63rem;
 }
 
 .today-price {

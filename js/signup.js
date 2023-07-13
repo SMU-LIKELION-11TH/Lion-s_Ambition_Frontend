@@ -1,66 +1,68 @@
+function getCookie(name) {
+  var cookieValue = null;
+  if (document.cookie && document.cookie !== '') {
+    var cookies = document.cookie.split(';');
+    for (var i = 0; i < cookies.length; i++) {
+      var cookie = cookies[i].trim();
+      if (cookie.substring(0, name.length + 1) === (name + '=')) {
+        cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+        break;
+      }
+    }
+  }
+  return cookieValue;
+}
+
 function onsubmitEmail() {
-  // Simulating email verification
-  const emailInput = document.getElementById('email');
-  const email = emailInput.value;
-
-  if (email.trim() === '') {
-    alert('이메일을 입력해주세요.');
-    return;
-  }
-
-  // Simulating asynchronous email verification request
-  setTimeout(() => {
-    const randomNumber = Math.floor(Math.random() * 100000);
-    const numberInput = document.getElementById('number');
-    numberInput.value = randomNumber;
-    numberInput.setAttribute('data-random-number', randomNumber); // Save the random number as a data attribute
-    alert(`이메일 인증번호: ${randomNumber}`);
-  }, 2000);
+  var email = $('#email').val();
+  console.log(email);
+  $.ajax({
+      type: 'POST',
+      url: 'http://127.0.0.1:8000/api/v1/email/validation',
+      contentType : 'application/json',
+      headers: {
+          'X-CSRFToken': getCookie('csrftoken')
+      },
+      data: JSON.stringify({
+        "email": email,
+        //백엔드에 보낸 데이터를 여기에 적어야 된다
+      }),
+      success : function(data){
+        console.log(data);
+      },
+      error: function(request, status, error){
+        console.log(status);
+      }
+  })
+  
+}
+//로그인하는 함수이다
+function onsubmitSignup(){
+  var email = $('#email').val();
+  var password = $('#password').val();
+  var name = $('#name').val();
+  var validation_code = $('#validation_code').val();
+  $.ajax({
+      type: 'POST',
+      url: 'http://127.0.0.1:8000/api/v1/signup',
+      contentType : 'application/json',
+      headers: {
+          'X-CSRFToken': getCookie('csrftoken')
+      },
+      data: JSON.stringify({
+        "email": email,
+        "password": password,
+        "name": name,
+        "validation-code": validation_code,
+        //백엔드에 보낸 데이터를 여기에 적어야 된다
+      }),
+      success : function(data){
+        alert("회원가입이 완료되었습니다")
+        window.location.replace('/login')
+      },
+      error: function(request, status, error){
+      }
+  })
 }
 
-function onclickckEmail() {
-  const numberInput = document.getElementById('number');
-  const enteredNumber = numberInput.value;
 
-  if (enteredNumber.trim() === '') {
-    alert('이메일 인증번호를 입력해주세요.');
-    return;
-  }
-
-  // Simulating email verification check
-  const randomNumber = numberInput.getAttribute('data-random-number');
-  if (enteredNumber === randomNumber) {
-    alert('이메일 인증이 완료되었습니다.');
-  } else {
-    alert('이메일 인증번호가 일치하지 않습니다.');
-  }
-}
-
-function onsubmitSignup() {
-  // Get form values
-  const nicknameInput = document.getElementById('nickname');
-  const emailInput = document.getElementById('email');
-  const passwordInput = document.getElementById('password');
-  const confirmPasswordInput = document.getElementById('confirm-password');
-
-  const nickname = nicknameInput.value;
-  const email = emailInput.value;
-  const password = passwordInput.value;
-  const confirmPassword = confirmPasswordInput.value;
-
-  // Perform validation (e.g., check if required fields are filled, password match, etc.)
-  if (nickname.trim() === '' || email.trim() === '' || password.trim() === '' || confirmPassword.trim() === '') {
-    alert('모든 필드를 입력해주세요.');
-    return;
-  }
-
-  if (password !== confirmPassword) {
-    alert('비밀번호가 일치하지 않습니다.');
-    return;
-  }
-
-  // Registration successful, perform further actions (e.g., send data to server)
-  alert('회원가입이 완료되었습니다.');
-  // Redirect to login page
-  window.location.href = 'login_view.html';
-}

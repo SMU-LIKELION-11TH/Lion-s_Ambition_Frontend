@@ -1,13 +1,29 @@
-function onSubmitLogin() {
-    // 로그인 정보 가져오기
-    var username = document.getElementById('username').value;
-    var password = document.getElementById('password').value;
-    
-    // 로그인 처리 및 리다이렉트
-    if (username === 'your_email@example.com' && password === 'your_password') {
-        alert('로그인 성공!');
-        location.href = 'manage_view.html'; // 로그인 성공 시 이동할 페이지
-    } else {
-        alert('로그인 실패. 올바른 이메일과 비밀번호를 입력하세요.');
-    }
+//로그인하는 함수이다
+
+function onclickLogin() {
+  
+    fetch('http://127.0.0.1:8000/api/v1/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        email: $('#email').val(),
+        password: $('#password').val(),
+      }),
+    })
+    .then((response) => {
+      if (response.status === 400) {
+        throw new Error('400 에러 발생: Bad Request');
+      } else if (response.status === 401) {
+        throw new Error('401 에러 발생: Unauthorized');
+      } else if (response.status === 429) {
+        throw new Error('429 에러 발생: Too Many Requests');
+      }
+      console.log('SUCCESS', response);
+      alert("로그인이 완료되었습니다")
+      window.location.replace('/manage')
+    })
+    .catch((error) => console.log('ERROR', error));
+
 }

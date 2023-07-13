@@ -23,6 +23,7 @@
 
 .menu-container {
   width: 100%;
+  padding-bottom: 70px;
 }
 
 .menu {
@@ -37,6 +38,7 @@
 
 .menu-image-container {
   height: 80%;
+  width: 100px;
   margin-left: 5vw;
 }
 
@@ -46,12 +48,10 @@
   background-color: transparent;
 }
 
-.menu-detail-button:hover {
-  cursor: pointer;
-}
-
 .menu-detail-button img {
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .menu-info {
@@ -81,7 +81,7 @@
   border-radius: 20px;
 }
 
-.quantity-selector button, .confirm-selector button {
+.quantity-selector button, .delete-selector button {
   font-size: 16px;
   border: none;
   background-color: transparent;
@@ -91,7 +91,7 @@
   cursor: pointer;
 }
 
-.confirm-selector {
+.delete-selector {
   width: 70px;
   padding: 5px 10px;
   margin-right: 5vw;
@@ -101,13 +101,13 @@
   text-align: center;
 }
 
-.confirm-selector button {
+.delete-selector button {
   font-size: 16px;
   font-weight: 500;
   color: #FFFFFF;
 }
 
-.confirm-selector button:hover {
+.delete-selector button:hover {
   cursor: pointer;
 }
 

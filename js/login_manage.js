@@ -1,19 +1,35 @@
+//쿠키를 받아온다
+
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie !== '') {
+      var cookies = document.cookie.split(';');
+      for (var i = 0; i < cookies.length; i++) {
+        var cookie = cookies[i].trim();
+        if (cookie.substring(0, name.length + 1) === (name + '=')) {
+          cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+          break;
+        }
+      }
+    }
+    return cookieValue;
+    
+}
+
 
 function logOutPage() {
-    //로그아웃 로직 구현하세요
-    location.href = "login_view.html";
-}
-function goToOrderPage() {
-    // 주문 페이지로 이동하는 로직을 구현하세요
-    location.href = "order_view.html";
-}
+  $.ajax({
+    type: 'GET',
+    url: 'http://127.0.0.1:8000/api/v1/logout',
+    contentType: 'application/json',
+    success: function(data) {
+        console.log(data);
+        window.location.replace('/login')
+    },
+    error: function(request, status, error) {
+        console.log(status);
+        window.location.replace('/login')
+    }
+  });
 
-function goToMenuPage() {
-    // 메뉴 페이지로 이동하는 로직을 구현하세요
-    location.href = "menu_view.html";
-}
-
-function goToSalesPage() {
-    // 매출 페이지로 이동하는 로직을 구현하세요
-    location.href = "sales_view.html";
 }
